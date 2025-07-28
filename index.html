@@ -1,21 +1,72 @@
 ---
 layout: home
 author_profile: true
+classes: wide
 ---
 
-<div style="margin-bottom: 3em; padding: 1.5em; background-color: #f5f5f5; border-radius: 8px;">
-<h2>About Allen</h2>
+<style>
+.home-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+.bio-section, .links-section, .posts-nav {
+  padding: 1em;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+.links-section {
+  background-color: #e8f4f8;
+}
+.posts-nav {
+  background-color: #f0f0f0;
+}
+.bio-section p, .links-section ul {
+  margin-bottom: 0.5em;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 768px) {
+  .home-content {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 
-<p>I'm a lifelong coder and storyteller who's been immersed in technology since childhood. At 11 years old, I started programming on the TI-99/4A, which led me to assembly language on the Apple II, working with the 6502 and 65816 processors. By 18, just two weeks out of high school, I began my career as a video game programmer, contributing to titles like Rock N' Roll Racing, The Game Genie, and Wing Commander on the SNES...</p>
+<div class="home-content">
+  <div>
+    <div class="bio-section">
+      <h2>About Allen</h2>
+      <p>I'm a lifelong coder and storyteller who's been immersed in technology since childhood. At 11 years old, I started programming on the TI-99/4A, which led me to assembly language on the Apple II, working with the 6502 and 65816 processors. By 18, just two weeks out of high school, I began my career as a video game programmer, contributing to titles like Rock N' Roll Racing, The Game Genie, and Wing Commander on the SNES...</p>
+      <p><a href="/about/" style="font-weight: bold;">Read my full story →</a></p>
+    </div>
 
-<p><a href="/about/" style="font-weight: bold;">Read my full story →</a></p>
-</div>
+    <div class="links-section">
+      <h2>Find Me Elsewhere</h2>
+      <ul style="margin: 0; padding-left: 1.5em;">
+        <li>🎙️ <a href="#" target="_blank">Retro Gaming Podcast</a> - SNES development stories</li>
+        <li>🔗 <a href="https://github.com/AllenArch" target="_blank">GitHub</a> - Projects and proof of concepts</li>
+        <li>📧 <a href="mailto:your-email@example.com">Email</a> - Consulting inquiries</li>
+      </ul>
+    </div>
+  </div>
 
-<div style="margin-bottom: 3em; padding: 1.5em; background-color: #e8f4f8; border-radius: 8px;">
-<h2>Find Me Elsewhere</h2>
-<ul>
-  <li>🎙️ <a href="#" target="_blank">My Retro Gaming Podcast Interview</a> - Discussing SNES development and the golden age of gaming</li>
-  <li>🔗 <a href="https://github.com/AllenArch" target="_blank">GitHub</a> - Current projects and proof of concepts</li>
-  <li>📧 <a href="mailto:your-email@example.com">Email</a> - For consulting inquiries</li>
-</ul>
+  <div class="posts-nav">
+    <h2>Recent Posts</h2>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+    {% for post in site.posts limit:10 %}
+      <li style="margin-bottom: 0.5em;">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <small style="display: block; color: #666;">{{ post.date | date: "%B %d, %Y" }}</small>
+      </li>
+    {% endfor %}
+    </ul>
+    {% if site.posts.size > 10 %}
+      <p style="margin-top: 1em; margin-bottom: 0;"><a href="/posts/">View all posts →</a></p>
+    {% endif %}
+  </div>
 </div>
