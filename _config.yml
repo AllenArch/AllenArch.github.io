@@ -1,2 +1,13 @@
 title: Allen Arch - Technical Findings
+description: Proof of concepts and technical explorations
+author: Allen Arch
 theme: minima
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
