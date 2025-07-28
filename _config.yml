@@ -1,13 +1,52 @@
 title: Allen Arch - Technical Findings
 description: Proof of concepts and technical explorations
-author: Allen Arch
-theme: minima
+url: "https://AllenArch.github.io"
+baseurl: ""
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Author info (this creates the sidebar!)
+author:
+  name: "Allen Arch"
+  avatar: "/assets/images/avatar.jpg"  # optional
+  bio: "Chief Architect specializing in C#/.NET Core, cloud architecture, and distributed systems"
+  location: "Your Location"  # optional
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/AllenArch"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/your-profile"  # update this
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:your-email@example.com"  # update this
+
+# Site settings
+permalink: /posts/:year/:month/:day/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag

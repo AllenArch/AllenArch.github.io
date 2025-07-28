@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Starting My Technical Blog"
 date: 2025-01-28
 categories: general
