@@ -9,7 +9,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 # Author info (this creates the sidebar!)
 author:
   name: "Allen Arch"
-  avatar: "/assets/images/avatar.jpg"  # optional
+  avatar: "https://github.com/AllenArch.png"
   bio: "Lifelong coder, game dev veteran (Rock N Roll Racing, Wing Commander SNES), ex-Fortune 5 Chief Architect, AI consultant"
   location: "Your Location"  # optional
   links:
