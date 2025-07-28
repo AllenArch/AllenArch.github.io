@@ -10,7 +10,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 author:
   name: "Allen Arch"
   avatar: "/assets/images/avatar.jpg"  # optional
-  bio: "Chief Architect specializing in C#/.NET Core, cloud architecture, and distributed systems"
+  bio: "Lifelong coder, game dev veteran (Rock N Roll Racing, Wing Commander SNES), ex-Fortune 5 Chief Architect, AI consultant"
   location: "Your Location"  # optional
   links:
     - label: "GitHub"
