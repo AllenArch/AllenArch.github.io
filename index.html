@@ -1,7 +1,11 @@
 ---
-layout: home
+layout: archive
 author_profile: true
-sidebar:
-  - title: "About"
-    text: "Chief Architect specializing in C#/.NET Core, cloud architecture, and distributed systems"
+title: "Technical Findings & Proof of Concepts"
 ---
+
+<h3 class="archive__subtitle">Recent Posts</h3>
+
+{% for post in site.posts %}
+  {% include archive-single.html %}
+{% endfor %}
